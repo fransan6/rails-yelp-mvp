@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(0, 204, 255);
+  }
+
+  .half-width {
+    width: 50%;
+  }
+
+ .bold-text {
+  font-weight: bold;
+ }
+
+ .orange-text {
+  color: rgb(255, 140, 0);
+ }
+
+ .orange-red-text {
+  color: orangered;
+ }
+
+ .dark-pink-text {
+  color: rgb(255, 32, 103);
+ }
+
+ .pink-text {
+  color: rgb(255, 76, 133);
+ }

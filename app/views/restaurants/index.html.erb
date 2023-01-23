@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="mt-4">All Restaurants</h1>
+  <br>
+  <div class="each-restaurant">
+    <% @restaurants.each do |restaurant| %>
+      <span class="bold-text orange-red-text">Name:</span> <%= restaurant.name %>.
+      <span class="bold-text orange-red-text">Cuisine:</span> <%= restaurant.category.capitalize %>.
+      <span class="bold-text"><%= link_to 'View restaurant', restaurant_path(restaurant) %></span>
+    <hr>
+    <% end %>
+  </div>
+</div>
