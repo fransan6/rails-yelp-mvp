@@ -8,13 +8,15 @@
   <h3 class="mb-3">Reviews</h3>
   <% @restaurant.reviews.each do |review| %>
   <div class="review-box">
-    <p class="bold-text"><%= review.rating %> stars</p>
+    <p class="bold-text"><%= review.rating %> star</p>
     <p>"<%= review.content %>"</p>
     <br>
   </div>
   <% end %>
+
   <p><%= link_to 'Back to all restaurants', restaurants_path %></p>
   <br>
+
   <h3 class="my-4">Add a review</h3>
   <%= simple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :content, label: 'Your thoughts' %>
