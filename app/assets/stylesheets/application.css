@@ -21,26 +21,27 @@
     color: rgb(0, 204, 255);
   }
 
-  .half-width {
-    width: 50%;
+  .review-box > p {
+    padding: 0;
+    margin: 0;
   }
 
- .bold-text {
+  .bold-text {
   font-weight: bold;
  }
 
- .orange-text {
+  .orange-text {
   color: rgb(255, 140, 0);
  }
 
- .orange-red-text {
+  .orange-red-text {
   color: orangered;
  }
 
- .dark-pink-text {
+  .dark-pink-text {
   color: rgb(255, 32, 103);
  }
 
- .pink-text {
+  .pink-text {
   color: rgb(255, 76, 133);
  }

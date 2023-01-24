@@ -5,5 +5,21 @@
   <p><span class="bold-text dark-pink-text">Phone number:</span> <%= @restaurant.phone_number %></p>
   <p><span class="bold-text pink-text">Cuisine:</span> <%= @restaurant.category.capitalize %></p>
   <br>
+  <h3 class="mb-3">Reviews</h3>
+  <% @restaurant.reviews.each do |review| %>
+  <div class="review-box">
+    <p class="bold-text"><%= review.rating %> stars</p>
+    <p>"<%= review.content %>"</p>
+    <br>
+  </div>
+  <% end %>
   <p><%= link_to 'Back to all restaurants', restaurants_path %></p>
+  <br>
+  <h3 class="my-4">Add a review</h3>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, label: 'Your thoughts' %>
+  <%= f.input :rating, label: 'Rating out of 5' %>
+  <%= f.submit "Submit review", class: "btn btn-warning" %>
+  <% end %>
+  <br>
 </div>

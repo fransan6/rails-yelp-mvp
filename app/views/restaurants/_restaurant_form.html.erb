@@ -1,0 +1,7 @@
+    <%= simple_form_for [banana] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, label: 'Cuisine', as: :select, collection: %w[chinese japanese italian belgian french] %>
+    <%= f.input :phone_number %>
+    <%= f.submit "Submit restaurant", class: "btn btn-warning" %>
+    <% end %>

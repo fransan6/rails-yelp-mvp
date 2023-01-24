@@ -1,11 +1,21 @@
 class ReviewsController < ApplicationController
-  def new
-  end
-
+  before_action :set_restaurant, only: %i[new create]
   def create
+    # forgot to put the search for specific restaurant in this action
+    @review = Review.new(review_params)
+    @review.restaurant = @restaurant # forgot this line!!
+    if @review.save
+      redirect_to restaurant_path(@restaurant)
+    else
+      render 'restaurants/show', status: :unprocessable_entity
+    end
   end
 
   private
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
 
   def review_params
     params.require(:review).permit(:content, :rating)
